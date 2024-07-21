@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./game.css">
+</head>
+<body>
+    <div class="backgrounds">
+        <img src="https://img.freepik.com/free-vector/sea-background-video-conferencing_52683-43718.jpg?w=1380&t=st=1692942666~exp=1692943266~hmac=5739949ffe7d1a9d3853af6ccf55ace418001de485b9dfb9ae7892b05373c7f0" alt="hari.gif" class="background1">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/838/177/original/cute-cartoon-sea-animal-fish-character-free-png.png" alt="killer" class="fish">
+        <img class="shark" src="shark.png" alt="eater">
+        <div class="popup">
+           <h2 class="popup-message"></h2>
+        </div>
+        <div class="popup1">
+           <h2 class="popup-message"></h2>
+        </div>
+          
+        <div class="reason">
+          <img class="tips" src="spongebob.png" alt="tip">
+          <div class="tip-box">
+            <h2 class="tip">Hai</h2>
+          </div>
+        </div>
+        <div class="start-btn"><button  type="button" class="start">Start</button></div>
+        <div class="popup-question">
+            <div class="popup-content">
+    
+                <span class="header-score">Score: <span class="current-score">0</span>/<span class="total-score">7</span></span>
+                <img  class="question-image" src="https://marvel-b1-cdn.bc0a.com/f00000000032040/ix-cdn.b2e5.com/images/32040/32040_4ae5771f798348f18cd4e72e25004e53_1521096619.png" alt="spam">
+             <h3>Let's consider a situation that a mail above has deleivered to you will you take it or not</h3><br>
+            
+             <div class="option-list">
+                <div class="option">
+                    <button type="button">Yes</button>
+                </div>
+                <div class="option">
+                    <button type="button">No</button>
+                </div>
+             </div>   
+             <div class="decision-btn">
+                <div class="tip-btn"><button  type="button" class="Reason">Reason</button></div>
+                <div class="next-btn"><button type="button" class="Next">Next</button></div>
+            </div>
+        </div>
+       <br>
+    
+    </div>
+    <div class="result-box" id="result-box">
+        <h2>Quiz Result</h2>
+        <div class="percentage-container">
+            <div class="circular-progress">
+                <span class="progress-value">0%</span>
+            </div>
+            <span class="score-text">Your score is 0 out of 7</span>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='level31.html'" type="button">Level 3</button>
+            <button onclick="location.href='game.html'" type="button">Try again</button>
+        </div>
+        
+    </div>
+    <script src="game.js"></script>    
+    <script src="question1.js"></script>
+</body>
+</html>

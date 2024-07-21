@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0808;
+        }
+        header {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .project {
+            margin-bottom: 2em;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .project h2 {
+            margin-top: 0;
+        }
+        .header ul li:nth-child(1),
+.sci li:nth-child(1)
+{
+	animation-delay: 1s;
+}
+.header ul li:nth-child(2),
+.sci li:nth-child(2)
+{
+	animation-delay: 1s;
+}
+.header ul li:nth-child(3),
+.sci li:nth-child(3)
+{
+	animation-delay: 1s;
+}
+.header ul li:nth-child(4),
+.sci li:nth-child(4)
+{
+	animation-delay: 1s;
+}
+.header ul li:nth-child(5),
+.sci li:nth-child(5)
+{
+	animation-delay: 1s;
+}
+.header ul li:nth-child(6),
+.sci li:nth-child(6)
+{
+	animation-delay: 1s;
+}
+.sci li a
+{
+	font-size: 1.2em;
+	color: #0e0101;
+}
+.sci li a:hover
+{
+    color: white;
+}
+.header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+    color: white;
+}
+.header .logo
+{
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+	text-transform: uppercase;
+	animation: fadeIn 0.5s linear forwards;
+	animation-delay: 1s;
+}
+.header ul
+{
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+	display: flex;
+}
+.header ul li
+{
+	opacity: 0;
+	list-style: none;
+	margin: 0 10px;
+	animation: fadeInRight 0.5s linear forwards;
+}
+.header ul li:last-child
+{
+	margin-right: 0;
+}
+.header ul li a
+{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: rgb(12, 0, 0);
+	padding: 5px 10px;
+	letter-spacing: 2px;
+}
+.header ul li a.active,
+.header ul li a:hover
+{
+	background: #000;
+	color: #fff;
+}
+@keyframes fadeInRight
+{
+	0%
+	{
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.element1
+{
+	opacity: 0;
+	position: absolute;
+	bottom: -150px;
+	right: 40%;
+	width: 250px;
+	height: 250px;
+	border: 40px solid #000;
+	animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
+	animation-delay: 1s;
+}
+.element2
+{
+	opacity: 0;
+	position: absolute;
+	left: -10px;
+	top: 40%;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #000;
+	animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
+	animation-delay: 1s;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2 class="logo">Your Logo</h2>
+        <ul>
+            <li>
+              <a href="index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="ourwork.html">Our Work</a>
+            </li>
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <header>
+        <br>
+        <br>
+        <h1>Tech Warriors</h1>
+        <p>Domain : Cyber Security</p>
+    </header>
+    <div class="container">
+        <div class="project">
+            <h2>Our Work</h2>
+            <p>We have created the game for making Awareness among people about Phishing attacks which has been performed intentionally to gain the personal credentials.<br>
+            <br>
+            <h2>Team Mates</h2>
+            <p>
+                Jayanth .P : 
+
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>

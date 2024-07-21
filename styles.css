@@ -1,0 +1,272 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color:white;
+    background:rgb(0, 0, 0);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.quiz-box h1{
+    font-size:30px;
+    text-align: center;
+    background: linear-gradient(90deg,transparent,red,transparent);
+    border-radius: 6px;
+}
+.quiz-box{
+    background-color: black;
+    border:5px solid green;
+    border-radius: 5px;
+    width: 500px;
+    margin-top: 20px;
+    height: 550px;
+    margin-left: 23%;
+    
+}
+.quiz-box.active{
+    opacity: 0;
+}
+.quiz-box .quiz-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid red;
+}
+.quiz-header span{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+.quiz-header .header-score{
+    background-color: red;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7px;
+}
+.quiz-box h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+.quiz-box .quiz-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 2px solid red;
+}
+.quiz-footer button{
+    background-color: red;
+    color: white;
+    margin: 2px 1px;
+    font-size: 20px;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+}
+.quiz-footer button:hover{
+    background-color: white;
+    color:red;
+}
+.option-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Add this to your styles.css file or in a <style> tag in the <head> section of your HTML */
+
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.option-list .option.correct{
+    background-color: green;
+}
+.option-list .option.wrong{
+    background-color: red;
+}
+
+
+
+.option label {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.option label:hover {
+    background-color: #d0d0d0;
+}
+/* Add this to your styles.css file or in a <style> tag in the <head> section of your HTML */
+
+/* Keyframe animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Apply the animation to the emoji */
+.emoji {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+.result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    background: transparent;
+    height: 400px;
+    line-height: 30px;
+    border: 4px solid green;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.result-box .button3{
+    margin: 20px;
+}
+.result-box.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.result-box h2{
+    font-size: 52px;
+}
+.percentage-container{
+    width: 250px;
+    margin: 0px 120px 40px;
+}
+.circular-progress{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background: conic-gradient(red 3.6deg,rgba(255,255,255,.1) 0deg);
+    border-radius: 50%;
+    margin: 0px 70px ;
+}
+.progress-value{
+    font-size: 20px;position: relative;
+}
+.circular-progress::before{
+    content: '';
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: black;
+    border-radius: 50%;
+}
+.buttons button{
+    width: 130px;
+    height: 47px;
+    background: red;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    margin: 0px 20px;
+    cursor: pointer;
+    color: white;
+    border:2px solid white;
+    border-radius: 4px;
+    transition: .5s;
+}
+.buttons button:hover{
+    background: rgb(213, 94, 94) !important;
+}
+/* Add this CSS to style the "Previous" button */
+.prev-btn {
+   
+    background: red;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    margin: 0px 20px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: 0.5s;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+/* Add this CSS to adjust the "Next" button position */
+.next-btn {
+    /* ... (your existing styles for the "Next" button) */
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    
+}
+.question-text{
+    height: 80px;
+}
+.next-btn.none{
+    display: none;
+}
+.finish-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Style for currently attending question button */
+.question-button.current {
+  background-color: blue;
+  color: white;
+}
+
+/* Style for attended question button */
+.question-button.attempted {
+  background-color: yellow;
+  color: black;
+}
+
+/* Style for not attended question button */
+.question-button {
+  background-color: violet;
+  color: white;
+}
+
+/* Additional styling for question buttons */
+.question-button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for all question buttons */
+.question-button:hover {
+  background-color: white;
+  color: red;
+}

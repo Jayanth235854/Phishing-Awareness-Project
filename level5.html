@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Correct Link</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box {
+            width: 45%;
+            margin-left: 25%;
+            margin-top: 20%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .option {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .next{
+           height: 30px;
+           margin-top: 15px;
+           margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>Box 1</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(1)">Option A</span><br>
+                <span class="option" onclick="checkAnswer(2)">Option B</span><br>
+                <span class="option" onclick="checkAnswer(3)">Option C</span>
+            </div>
+        </div>
+        <div class="box" id="box2">
+            <h2>Box 2</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(4)">Option D</span><br>
+                <span class="option" onclick="checkAnswer(5)">Option E</span><br>
+                <span class="option" onclick="checkAnswer(6)">Option F</span>
+            </div>
+        </div>
+        <div class="box" id="box3">
+            <h2>Box 3</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(7)">Option G</span><br>
+                <span class="option" onclick="checkAnswer(8)">Option H</span><br>
+                <span class="option" onclick="checkAnswer(9)">Option I</span>
+            </div>
+        </div>
+        <div class="box" id="box4">
+            <h2>Box 4</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(10)">Option J</span><br>
+                <span class="option" onclick="checkAnswer(11)">Option K</span><br>
+                <span class="option" onclick="checkAnswer(12)">Option L</span>
+            </div>
+        </div>
+        <div class="box" id="box5">
+            <h2>Box 5</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(13)">Option M</span><br>
+                <span class="option" onclick="checkAnswer(14)">Option N</span><br>
+                <span class="option" onclick="checkAnswer(15)">Option O</span>
+            </div>
+        </div>
+        <div class="box" id="box6">
+            <h2>Box 6</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(16)">Option P</span><br>
+                <span class="option" onclick="checkAnswer(17)">Option Q</span><br>
+                <span class="option" onclick="checkAnswer(18)">Option R</span>
+            </div>
+        </div>
+        <div class="box" id="box7">
+            <h2>Box 7</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(19)">Option S</span><br>
+                <span class="option" onclick="checkAnswer(20)">Option T</span><br>
+                <span class="option" onclick="checkAnswer(21)">Option U</span>
+            </div>
+        </div>
+        <div class="box" id="box8">
+            <h2>Box 8</h2>
+            <p>Click the correct link below:</p>
+            <div class="options">
+                <span class="option" onclick="checkAnswer(22)">Option V</span><br>
+                <span class="option" onclick="checkAnswer(23)">Option W</span><br>
+                <span class="option" onclick="checkAnswer(24)">Option X</span>
+            </div>
+        </div>
+        </div>
+    <button class="next" id="nextButton" onclick="showNextBox()">Next</button>
+    <script>
+         let currentBoxIndex = 0;
+        const boxes = document.querySelectorAll('.box');
+
+        function showNextBox() {
+            if (currentBoxIndex < boxes.length) {
+                boxes[currentBoxIndex].style.display = 'none'; // Hide the current box
+                currentBoxIndex++;
+            }
+
+            if (currentBoxIndex < boxes.length) {
+                boxes[currentBoxIndex].style.display = 'block'; // Show the next box
+            } else {
+                alert('No more boxes to display.');
+            }
+        }
+
+        function checkAnswer(selectedOption) {
+            // You can implement the checkAnswer logic here for each box.
+            // For this example, we'll just display an alert for demonstration purposes.
+            alert('Answer checked for Box ' + currentBoxIndex + ': You selected Option ' + selectedOption);
+        }
+
+        // Show the first box initially
+        showNextBox();
+        function checkAnswer(selectedOption) {
+            const boxText = document.getElementById('box' + selectedOption).textContent;
+            
+            // You can customize these conditions to match the correct links for each box.
+            if (selectedOption === 1 || selectedOption === 5 || selectedOption === 9 || selectedOption === 13 ||
+                selectedOption === 17 || selectedOption === 21 || selectedOption === 24) {
+                alert('Correct! You found the correct link.');
+            } else {
+                alert('Incorrect! Try again.');
+            }
+        }
+    </script>
+</body>
+</html>

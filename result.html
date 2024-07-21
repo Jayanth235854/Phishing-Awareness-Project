@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level3.css">
+    <title>Result Page</title>
+    <style>
+         body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+        .result-container {
+            border: 2px dotted;
+            width: 500px;
+            margin-left: 30%;
+            margin-top: 15%;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .result{
+            margin-left: 40%;
+        }
+        .buttons{
+            margin-top: 40px;
+            margin-left: 150px;
+        }
+        .button2{
+            margin-left: 100px;
+        }
+        button{
+            height: 30px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="enjoy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>    
+    <div class="result-container">
+        <div class="result">
+        <h1>Results</h1>
+        <h3>Your final score is: <span id="finalScore"></span></h3>
+        <!-- You can add any additional content or styling to the result page here. -->
+        
+        </div>
+        <div class="buttons">
+            <button class="button1"  onclick="location.href='car/index.html'" type="button"><b>Level 4</b></button>
+            <button class="button2"    onclick="location.href='level31.html'" type="button"><b>Try again</b></button>
+        </div>
+    </div>
+    <script>
+        // Retrieve the final score from local storage
+        const finalScore = localStorage.getItem('finalScore');
+        
+        // Display the final score on the result page
+        const finalScoreElement = document.getElementById('finalScore');
+        finalScoreElement.textContent = finalScore;
+        
+        // Clear the final score from local storage
+        localStorage.removeItem('finalScore');
+    </script>
+</body>
+</html>

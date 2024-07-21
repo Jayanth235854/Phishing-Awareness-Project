@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+.header{
+    top: 0;
+    height: 60px;
+    width: 900vw;
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    align-items: center;
+    position: fixed;
+
+}
+.header.back{
+    float: right;
+}
+
+.materials{
+    background: black;
+    color: red;
+    padding: 10px;
+}
+
+p{
+    color: white;
+    text-indent: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    font-size: medium;
+}
+h3{
+    padding-top: 10px;
+}
